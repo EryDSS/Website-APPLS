@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Class Boundary - Control - Entity</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.0.0.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg" style="background-color: #6fa8dc">
+		<a class="navbar-brand" href="#" style="color: white"><img src="images/logo.png" width="60px"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+			<li class="nav-item"> <a class="nav-link" href="pilih_materi.html">Materi</a> </li>
+          <li class="nav-item active"><a class="nav-link" href="#">Class Boundary - Control - Entity</a></li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+</form>
+      </div>
+    </nav>
+    <div class="row">
+      <div class="col-lg-2">
+        <nav class="navbar bg-light">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#leftNavbar" aria-controls="leftNavbar" aria-expanded="true" aria-label="Toggle navigation">
+          <img src="images/toggler.png">
+          </button>
+          <div class="collapse navbar-collapse" id="leftNavbar">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="mod1B"><img src="images/presentation.png"> Presentasi</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="mod2B"><img src="images/video.jpg"> Video</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="col-lg-10">
+        <div class="container-fluid">
+          <div id="mod1T" class="collapse show">
+            <div class="row">
+              <h4>Modul Presentasi</h4>
+            </div>
+            <div class="row">
+              <object height="480" width="720" data="8973_4-dan-5-.-flow-control-dan-error-control.pdf">
+            </div>
+          </div>
+          <div id="mod2T" class="collapse">
+            Modul Video
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <p>Copyright © APPLS. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.0.0.js"></script>
+    <script>
+$(document).ready(function(){
+    $("mod1B").ready(function(){
+      $("#mod1B").css("border", "1px solid rgb(41, 47, 53)");
+      $("#mod2B").css("border", "1px solid rgb(248, 249, 250)");
+    });
+    $("#mod1B").click(function(){
+        $("#mod1T").collapse('show');
+        $("#mod2T").collapse('hide');
+        $("#mod1B").css("border", "1px solid rgb(41, 47, 53)");
+        $("#mod2B").css("border", "1px solid rgb(248, 249, 250)");
+    });
+    $("#mod2B").click(function(){
+        $("#mod2T").collapse('show');
+        $("#mod1T").collapse('hide');
+        $("#mod2B").css("border", "1px solid rgb(41, 47, 53)");
+        $("#mod1B").css("border", "1px solid rgb(248, 249, 250)");
+    });
+});
+</script>
+	  </section>
+  </body>
+</html>
